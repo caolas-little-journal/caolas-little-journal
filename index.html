@@ -207,6 +207,82 @@ footer {
   }
 }
 
+/* FLORAL CORNERS — CAOLA'S LITTLE JOURNAL */
+
+:root {
+  --flower-rose: #C79AA5;
+  --flower-leaf: #A5B3A0;
+}
+
+/* Bunga sudut untuk bagian cerita */
+.intro,
+.featured,
+.about {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Ornamen bunga kanan atas */
+.intro::after,
+.featured::after,
+.about::after {
+  content: "✿";
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  font-size: 34px;
+  color: var(--flower-rose);
+  opacity: 0.65;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ornamen bunga kiri bawah */
+.intro::before,
+.featured::before,
+.about::before {
+  content: "❀";
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+  font-size: 29px;
+  color: var(--flower-rose);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Sentuhan bunga pada footer */
+footer {
+  position: relative;
+}
+
+footer::before {
+  content: "❀  ✿  ❀";
+  display: block;
+  text-align: center;
+  color: var(--flower-rose);
+  font-size: 20px;
+  letter-spacing: 12px;
+  margin-bottom: 18px;
+}
+
+/* Tampilan bunga lebih kecil di HP */
+@media (max-width: 720px) {
+  .intro::after,
+  .featured::after,
+  .about::after {
+    font-size: 23px;
+  }
+
+  .intro::before,
+  .featured::before,
+  .about::before {
+    font-size: 21px;
+  }
+}
+
+    
   </style>
 </head>
 <body>
